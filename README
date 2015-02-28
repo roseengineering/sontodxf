@@ -1,0 +1,13 @@
+
+Usage: sontodxy.py [OPTIONS] [file ...] 
+
+Reads the Sonnet files named on the command line, or from standard input,
+exporting any polygons found to standard output in DXF format.  This DXF output 
+can be imported into the Eagle PCB software using the 'import-dxf' ULP script.  
+
+Options:
+  -r, --rotate NUM:   rotate polygons by NUM degrees
+  -h, --help:         show this help message
+
+Licensed under the GPL 3.0
+
