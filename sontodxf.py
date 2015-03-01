@@ -108,14 +108,15 @@ class Sonnet():
         self.file = open(filename) if filename is not None else sys.stdin
         for line in self.file:
             token = string.split(line)
-            if token[0] == "GEO": self.geo()
-            if token[0] == "HEADER": self.header()
-            if token[0] == "DIM": self.dim()
-            if token[0] == "FREQ": self.freq()
-            if token[0] == "OPT": self.opt()
-            if token[0] == "CONTROL": self.control()
-            if token[0] == "VARSWP": self.varswp()
-            if token[0] == "QSG": self.qsg()
+            if len(token) == 1:
+                if token[0] == "GEO": self.geo()
+                if token[0] == "HEADER": self.header()
+                if token[0] == "DIM": self.dim()
+                if token[0] == "FREQ": self.freq()
+                if token[0] == "OPT": self.opt()
+                if token[0] == "CONTROL": self.control()
+                if token[0] == "VARSWP": self.varswp()
+                if token[0] == "QSG": self.qsg()
 
     def rotate(self, theta):
         """
